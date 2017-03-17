@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Duolingo Helper",
+  "description": "This extension makes Duolingo really easy",
+  "version": "1.0",
+  "icons": {
+    "64": "Duolingo64.png",
+    "256": "Duolingo256.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.duolingo.com/*"
+      ],
+      "js": [
+        "DuolingoInject.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "Duolingo64.png",
+    "default_popup": "popup.html",
+    "default_title": "Duolingo made really easy"
+  },
+  "permissions": [
+    "webRequest",
+    "*://www.duolingo.com/"
+  ]
+}
